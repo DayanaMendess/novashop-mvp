@@ -60,3 +60,22 @@ http://localhost:8081
 
 Frontend:
 http://localhost:5173
+
+
+
+---
+
+# 3. Diagrama de Arquitectura del Sistema
+
+```mermaid
+graph LR
+
+Usuario --> Frontend
+Frontend --> Gateway
+Gateway --> Backend
+Backend --> BaseDatos
+
+Frontend[Frontend React]
+Gateway[API Gateway]
+Backend[Backend Spring Boot]
+BaseDatos[(PostgreSQL Database)]
